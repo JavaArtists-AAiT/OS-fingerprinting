@@ -16,22 +16,14 @@ ipadd1=tkinter.StringVar()
 ipadd2=tkinter.StringVar()
 ipadd3=tkinter.StringVar()
 ipadd4=tkinter.StringVar()
-lt1=StringVar()
-print(lt1)
+lt1=tkinter.StringVar()
 lt2 = tkinter.StringVar()
 lt3 = tkinter.StringVar()
 lt4 = tkinter.StringVar()
 lt6 = tkinter.StringVar()
 lt5 = tkinter.StringVar()
 lt7 = tkinter.StringVar()
-lt1.set("")
-lt2.set("")
-lt3.set("")
-lt4.set("")
-lt5.set("")
-lt6.set("")
-lt7.set("")
-print(lt1)
+
 
 class OS_Detection:
     def Detect_OS():
@@ -99,22 +91,7 @@ class OS_Detection:
         lt6.set("")
         lt7.set("")
             
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# UI
 canvas = tkinter.Canvas(window, width=500, height=170)
 canvas.pack()
 
