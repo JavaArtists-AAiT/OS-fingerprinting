@@ -46,6 +46,7 @@ def Detect_OS():
     print(ip)
     scanner = nmap.PortScanner()
     result = scanner.scan(ip, arguments="-O")['scan'][ip]['osmatch'][0]
+    # print(result)
     json_result = json.dumps(result, separators=(',', ':'))
     json_result1 = json.loads(json_result)
     json_result2 = json.dumps(json_result1["osclass"])
@@ -67,13 +68,17 @@ def Detect_OS():
     tkinter.Label(Frame_In_Canvas2, text="Vendor Of OS:  "+x2,font = ('helvetica',9,'bold')).grid(row=2,sticky='nw')
     tkinter.Label(Frame_In_Canvas2, text="OSfamily Of OS:  "+x3,font = ('helvetica',9,'bold')).grid(row=3,sticky='nw')
     tkinter.Label(Frame_In_Canvas2, text="OSgen Of OS:  "+x4,font = ('helvetica',9,'bold')).grid(row=4,sticky='nw')
-    tkinter.Label(Frame_In_Canvas2, text="Accuraccy Of OS:  "+x5,font = ('helvetica',9,'bold')).grid(row=6,sticky='nw')
+    tkinter.Label(Frame_In_Canvas2, text="Accuraccy Of Detection:  "+x5,font = ('helvetica',9,'bold')).grid(row=6,sticky='nw')
     tkinter.Label(Frame_In_Canvas2, text=("CPE Of OS:  ",x6),font = ('helvetica',9,'bold')).grid(row=7,sticky='nw')
     ipadd1.set("")
     ipadd2.set("")
     ipadd3.set("")
     ipadd4.set("")
-
+    
+    # try:
+    #     Detect_OS
+    # except nmap as error:
+    #     tkinter.Label(Frame_In_Canvas2, text="There seems to be an error while processing")
 
 
 
